@@ -14,3 +14,12 @@
 3. Append equation to previous calcs (This is in very early stage)
 4. Append name for the equation and also add a name input box above the normal text box
 
+
+# Updated Styling: 
+1. Updated the actual Calculator styles
+2. Added a background image (temp needs changing)
+3. Changed the color of the borders but this will all be changed when its functioning correcly
+4. The script now makes a header element for the name and that is fucntioning as expected
+5. You can now have multiple calculations! This does not warp down to the next row yet but its progress
+
+

@@ -84,8 +84,12 @@ function calculate() {
   console.log(answer) // Log Answer !TEMP!
   // Append the answer to the previous answers: 
   const new_div = document.createElement('div') // Create a new div for the previous equation
-  new_div.textContent = nameBox.value + answer; // Assign the div with the value of the answer and the name of the equation
+  const new_header = document.createElement('header') // Create a new header element for the name of the equation
+  new_header.textContent = nameBox.value // Assign the header element with nameBox.value
+  new_div.textContent = answer; // Assign the div with the value of the answer and the name of the equation
+  new_div.appendChild(new_header) // Apend the header with new calcs
   prev_calcs.appendChild(new_div) // Append the new div to the previous calcs section
+
 }
 
 

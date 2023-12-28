@@ -15,10 +15,12 @@ body {
     /* Border */
     border-style: solid;
     border-width: thin;
+    border-color: white;
     /* Flex */
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    
 
 }
 
@@ -28,11 +30,20 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
     /* Sizing */
     width: 20%;
     height: 40%;
     border-radius: 15px;
     /* Coloring */
-    background-color: blue;
-
+    background-color: whitesmoke;
+    /* Text Styling */
+    font-size: 10mm;
+    
+}
+#prev-calcs header  {
+    /* Flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
