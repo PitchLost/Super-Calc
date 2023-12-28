@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Calculator</title>
+    <link rel="stylesheet" href="/Styles/main.css"> <!-- This is the main CSS File-->
+    
+
+    <!-- Scripts -->
+    <script defer src="/Scripts/main.js"></script> <!-- Main Javascript File-->
+
+    <!-- Google Fonts -->
+
+    <!-- Font Awesome -->
+
+
+
+</head>
+<body>
+
+
+    <!-- Calculator Model -->
+    <form id="calcForm"> 
+    <div id="calcDiv"> 
+        <input id="text-box" placeholder="0"> <!-- This is the main text box for the calculator-->
+
+        <!-- Calc Buttons -->
+
+        <div id="calc-buttons"> 
+           <div id="row-1"> <!-- This is the first row of the calc buttons-->
+
+            <button id="one" onclick="add_number(this)">1</button> <!-- 1 -->
+            <button id="two" onclick="add_number(this)">2</button> <!-- 2 -->
+            <button id="three">3</button> <!-- 3-->
+            <button id="plus">+</button> <!-- + operator-->
+    
+           </div>
+
+           <div id="row-2"><!-- This is the second row of the calc buttons-->
+            <button id="four">4</button> <!-- 1 -->
+            <button id="five">5</button> <!-- 2 -->
+            <button id="six">6</button> <!-- 3-->
+            <button id="divide">÷</button> <!-- Divide operator-->
+
+           </div>
+
+           <div id="row-3"> <!-- This is the third and last row of the calc buttons-->
+
+            <button id="seven">7</button> <!-- 7-->
+            <button id="eight">8</button> <!-- 8-->
+            <button id="nine">9</button>  <!-- 9-->
+            <button id="multiply">*</button> <!-- X operator -->
+
+           <div id="row-4"> <!-- This is the operator Row-->
+            <button id="minus">-</button> <!-- Minus operator-->
+            <button id="zero">0</button> <!-- 0-->
+            <button id="delete"><</button> <!-- Backspace (Needs to be changed to a actual delete button) -->
+            <button id="clear">C</button> <!-- Clear Operator-->
+            
+
+            </div>
+
+        
+
+
+           </div>
+
+            </div>
+
+
+        </div>
+
+    
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+* { 
+    margin: 0;
+    padding: 0;
+
+}
+
+body { 
+    display: flex;
+    justify-content: center;
+}
+
+
+#calcDiv  { /* Main style div for the calc elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Keep the items in a columised section */
+    /* Width/Height: */
+    width: 100%;
+    height: 100%;
+    /* Position: */
+    position: relative; /* This allows positional statements while keeping the flow of the HTML setup */
+    top: 10%;
+    /* Border: */
+    border-style: solid; 
+    border-width: thin;
+}
+
+#calcDiv input { /* Styling for the number input box */
+    width: 70%; /* Width for the input */
+    height: 4em; /* Height for the input */
+    margin-bottom: 2em; /* Have some distance from the bottom of the input */
+
+    /* Border Styling: */
+    
+    border-style: none;
+    border-radius: 15px;
+
+    /* Postition: */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 3%;
+
+    /* Colors/Popper */
+    background-color: whitesmoke;
+
+    /* Text: */
+    font-size: 5mm;
+    text-align: center;
+
+}
+
+#calc-buttons button { /* The main css styling for the calc buttons. This will be the generic styling */
+    width: 5em; /* Width for the individual buttons */
+    height: 4em; /* Height for the individual buttons */
+    font-size: 4mm; /* Make the font a good size */
+    /* Spacing: */
+    margin-bottom: 1em; /* Spacing on the bottom */
+    margin-right: 1em; /* Space the buttons horizontally */
+
+}
