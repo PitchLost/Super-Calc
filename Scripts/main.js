@@ -67,37 +67,15 @@ const nameBox = document.getElementById('name-box')
 
 // Add a number to the text box
 
-// Constantly update the text box with the running total
-
-while (flag == true) { 
-    if (flag) {
-        textBox.value = new_calc;
-    }
-
-    // Perform operations that might eventually change the value of flag or runningTotal
-    // For instance, setting flag to false to break out of the loop
-    flag = false; // Example change to exit the loop
-}
-
-
-
+// Prevent Defualt Submission
 calcForm.addEventListener('submit',e => { 
     e.preventDefault()
 })
-
 function add_number(element) { 
     let new_number = element.value; // Make a local new number variable to track what number is being added
-    //TODO: Clear the text box if the value is lower than 1 (0) otherwise it will just be 01+2+5 and so on. Not super duper urgent
-    // if (textBoxValue < 1) { 
-    //     textBoxValue = NaN
-    // }
     textBox.value = textBoxValue += new_number // Update the text box with the new number in it
     new_number = 0 // Reset This variable
-    
-
 }
-
-
 
 // Function to calculate the equation: 
 
