@@ -8,14 +8,18 @@ let textBox = document.getElementById('text-box')
 let textBoxValue = textBox.value;
 
 
-// Add a running total for the calculation: 
-let runningTotal = 0
 
-textBoxValue = runningTotal
+// Add a running total for the calculation: 
+let new_calc = 0
+
+textBoxValue = new_calc
 
 // Flag to keep the total loop running: 
 
 let flag = true;
+
+// Array to keep track of prev equations: 
+const prev_calcs_ar = []
 
 
 // Buttons: 
@@ -42,7 +46,7 @@ nine.value = 9;
 // Operators: 
 
 const multiply = document.getElementById('multiply')
-multiply.value = 'x'
+multiply.value = '*'
 
 const plus = document.getElementById('plus')
 plus.value = '+'
@@ -51,14 +55,15 @@ const minus = document.getElementById('minus')
 minus.value = '-'
 
 const divide = document.getElementById('divide')
-divide.value = '÷'
+divide.value = '/'
 
 const del = document.getElementById('delete')
-// del.value = '' //FIXME:
+ del.value = ' ' 
 
-const clear = document.getElementById('clear')
-clear.value = ''
+ // Prev-calcs HTML elements
 
+const prev_calcs = document.getElementById('prev-calcs') // Get the previous calculations HTML div
+const nameBox = document.getElementById('name-box')
 
 // Add a number to the text box
 
@@ -66,7 +71,7 @@ clear.value = ''
 
 while (flag == true) { 
     if (flag) {
-        textBox.value = runningTotal;
+        textBox.value = new_calc;
     }
 
     // Perform operations that might eventually change the value of flag or runningTotal
@@ -81,28 +86,28 @@ calcForm.addEventListener('submit',e => {
 })
 
 function add_number(element) { 
-
-    console.log('The add number function was called from',element) // Log the caller
-
     let new_number = element.value; // Make a local new number variable to track what number is being added
-    console.log('The value of the number being added',new_number) // Log that number
-
     //TODO: Clear the text box if the value is lower than 1 (0) otherwise it will just be 01+2+5 and so on. Not super duper urgent
     // if (textBoxValue < 1) { 
     //     textBoxValue = NaN
     // }
-
     textBox.value = textBoxValue += new_number // Update the text box with the new number in it
-
-    // reset the variables: 
-    new_number = 0
+    new_number = 0 // Reset This variable
     
 
 }
 
 
+
+// Function to calculate the equation: 
+
 function calculate() { 
-    console.log('The total is',runningTotal)
+  let answer = eval(textBoxValue) // Get the answer of the equation 
+  console.log(answer) // Log Answer !TEMP!
+  // Append the answer to the previous answers: 
+  const new_div = document.createElement('div') // Create a new div for the previous equation
+  new_div.textContent = nameBox.value + answer; // Assign the div with the value of the answer and the name of the equation
+  prev_calcs.appendChild(new_div) // Append the new div to the previous calcs section
 }
 
 

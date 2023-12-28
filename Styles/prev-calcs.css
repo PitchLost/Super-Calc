@@ -1,0 +1,38 @@
+body { 
+    display: flex;
+    justify-content: center;
+    
+}
+
+#prev-calcs { 
+    /* Position */
+    position: absolute;
+    top: 82%;
+    left: 5%;
+    /* Size */
+    width: 90%;
+    height: 50%; 
+    /* Border */
+    border-style: solid;
+    border-width: thin;
+    /* Flex */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#prev-calcs div { 
+    /* Flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Sizing */
+    width: 20%;
+    height: 40%;
+    border-radius: 15px;
+    /* Coloring */
+    background-color: blue;
+
+}
