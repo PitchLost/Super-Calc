@@ -22,4 +22,9 @@
 4. The script now makes a header element for the name and that is fucntioning as expected
 5. You can now have multiple calculations! This does not warp down to the next row yet but its progress
 
+# Bug Fixes: 
+1. Zero now works
+2. There is no longer a constant 0 on the text box
+3. The delete button now works
+
 

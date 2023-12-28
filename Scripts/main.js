@@ -41,6 +41,8 @@ const eight = document.getElementById('eight');
 eight.value = 8;
 const nine = document.getElementById('nine');
 nine.value = 9;
+const zero = document.getElementById('zero')
+zero.value = 0
 
 
 // Operators: 
@@ -73,14 +75,14 @@ calcForm.addEventListener('submit',e => {
 })
 function add_number(element) { 
     let new_number = element.value; // Make a local new number variable to track what number is being added
-    textBox.value = textBoxValue += new_number // Update the text box with the new number in it
+    textBox.value = textBox.value += new_number // Update the text box with the new number in it
     new_number = 0 // Reset This variable
 }
 
 // Function to calculate the equation: 
 
 function calculate() { 
-  let answer = eval(textBoxValue) // Get the answer of the equation 
+  let answer = eval(textBox.value) // Get the answer of the equation 
   console.log(answer) // Log Answer !TEMP!
   // Append the answer to the previous answers: 
   const new_div = document.createElement('div') // Create a new div for the previous equation
@@ -89,7 +91,11 @@ function calculate() {
   new_div.textContent = answer; // Assign the div with the value of the answer and the name of the equation
   new_div.appendChild(new_header) // Apend the header with new calcs
   prev_calcs.appendChild(new_div) // Append the new div to the previous calcs section
+}
 
+// Function to clear the number box: 
+function clear_number() { 
+  textBox.value = ' '
 }
 
 
