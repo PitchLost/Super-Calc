@@ -27,4 +27,10 @@
 2. There is no longer a constant 0 on the text box
 3. The delete button now works
 
+# Combine Equations: 
+1. You can now add two equations together by clicking on the first one, and then the second one
+2. It will give a alert with the total price of the two equations
+3. The Boxes now clear when the calculate function occurs
+
+
 

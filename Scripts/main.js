@@ -91,11 +91,29 @@ function calculate() {
   new_div.textContent = answer; // Assign the div with the value of the answer and the name of the equation
   new_div.appendChild(new_header) // Apend the header with new calcs
   prev_calcs.appendChild(new_div) // Append the new div to the previous calcs section
+
+  // Add Event listners to all the new divs:
+
+  document.querySelectorAll('#prev-calcs div').forEach(div => { 
+    div.addEventListener('click', function() { 
+        combine(this)
+    });
+});
+ // Clear the boxes
+ clear_all()
+
 }
 
 // Function to clear the number box: 
 function clear_number() { 
   textBox.value = ' '
+}
+
+// function to clear all boxes when done
+
+function clear_all() { 
+  textBox.value = ' '
+  nameBox.value = ' '
 }
 
 
