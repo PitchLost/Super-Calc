@@ -82,6 +82,12 @@ function add_number(element) {
 // Function to calculate the equation: 
 
 function calculate() { 
+
+  if (textBox.value == '' || nameBox.value == '') { 
+    alert('Please fill out all the boxes')
+  } else { 
+
+
   let answer = eval(textBox.value) // Get the answer of the equation 
   console.log(answer) // Log Answer !TEMP!
   // Append the answer to the previous answers: 
@@ -95,18 +101,18 @@ function calculate() {
   // Add Event listners to all the new divs:
 
   document.querySelectorAll('#prev-calcs div').forEach(div => { 
-    div.addEventListener('click', function() { 
-        combine(this)
+    div.addEventListener('click', function() {  // Add a event listner to each new div
+        combine(this) // Call the combine function and use this to track which element called the function
     });
 });
  // Clear the boxes
- clear_all()
+ clear_all() 
 
-}
+}}
 
 // Function to clear the number box: 
 function clear_number() { 
-  textBox.value = ' '
+  textBox.value = ' ' // Set the textBox text content to empty
 }
 
 // function to clear all boxes when done

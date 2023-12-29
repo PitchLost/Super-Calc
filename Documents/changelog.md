@@ -32,5 +32,10 @@
 2. It will give a alert with the total price of the two equations
 3. The Boxes now clear when the calculate function occurs
 
+# Upate Stlying 2: 
+1. The equations now wrap to the next line allowing unlimited equations to be added
+2. Some nice new styles on the equation boxes
+3. Prevent defualt submisission
+4. Update Comments
 
 

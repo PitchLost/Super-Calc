@@ -10,8 +10,13 @@ body {
     top: 82%;
     left: 5%;
     /* Size */
+    /* width */
     width: 90%;
-    height: 50%; 
+    max-width: 90%;
+    /* height */
+    min-height: 50%;
+    height: max-content; 
+    max-height: fit-content;
     /* Border */
     border-style: solid;
     border-width: thin;
@@ -20,6 +25,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     
 
 }
@@ -31,14 +37,22 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    flex-wrap: wrap ; /* Wrap to the next line when it fills the first one
     /* Sizing */
+    /* width */
     width: 20%;
-    height: 40%;
+    max-width: 20%;
+    min-width: 20%;
+    /* height */
+    min-height: 40%;
     border-radius: 15px;
     /* Coloring */
     background-color: whitesmoke;
     /* Text Styling */
     font-size: 10mm;
+    /* Margin */
+    margin-right: 2em;
+    margin-bottom: 2em;
     
 }
 #prev-calcs header  {
@@ -46,4 +60,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1em;
+    /* ... */
 }
