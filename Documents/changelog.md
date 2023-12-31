@@ -52,3 +52,7 @@
 2. Used a array instead of if else statements
 3. Code looks cleaner and is more maintainable
 
+# Grand Total Update: 
+1. Append the grand total to a previous calculation each time
+2. Reset the selected divs and grand total when the function is complete
+
