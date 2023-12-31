@@ -1,35 +1,49 @@
-console.log('Hello from combine.js')
+console.log('Hello World -combine.js')
 
-let counter = 0
-let first_eq = 0
-let second_eq = 0
+let total = [0] // Array to keep track of the total
+
+let to_add = null // We will assign the value being added to this variable. 
+
+let final_result = 0
 
 
+
+// ! Testing
+
+let flag_2 = true
+
+let combines_counter = 0
+
+
+// Add items to the combine array
+
+//! Function runs for each event listener on the divs. This needs to be fixed ASAP
 
 
 function combine(caller) { 
-    counter++; // Increase the counter
-    if (counter  == 1 ) { 
-    first_eq = caller.childNodes[0].textContent.trim() // Get the first node of the caller in this case that will be the number
-    console.log('first_eq',first_eq) // Log
-    }
-    else if (counter == 2) { 
-        second_eq = caller.childNodes[0].textContent.trim(); // Get the first node of the second caller
-        console.log('second_eq',second_eq) // Log
-       
-    }
-    else if (counter == 3) { 
-        combineEquations(first_eq, second_eq) // Call the combine function if the counter is at 3 (this means that both the eqs have been got)
-        counter = 0 // Set the counter to 0 to allow the function to run again
-    }
-}
-function combineEquations(first_eq,second_eq ) {
-    const combinedResult = parseInt(first_eq) + parseInt(second_eq) // Turn the string into a interger
-    alert('The total is:' + ' ' + '$' + combinedResult) // Give a alert with the value
-    first_eq = 0 // Reset the first equation variable
-    second_eq = 0 // Reset the second equation variable
-  
+    caller.style.backgroundColor = 'red' // Set the background color to red when selected
+    caller.style.color = 'white' // Set the text color to white when selected
+    console.log('The length of the total is,',total.length) // Log
+    console.log('combine function (11)') // Log
+to_add = caller.childNodes[0].textContent.trim() // Assign the variable with the value being added
+total.push(to_add) // Add the number to the variable
+to_add = null // Reset the variable for future use
 
-  
-  }
 
+
+console.log('The total is at:',total) // Log
+return true
+
+    }
+
+
+
+function calc_combines() { 
+    divide.style.backgroundColor = 'Beige'
+    
+    for (let i = 0; i <total.length; i++) { 
+    final_result += parseFloat(total[i]);
+    }
+    console.log('The Grand total is,',final_result)
+    alert('Your total is:' + '' + final_result)
+    }

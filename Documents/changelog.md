@@ -39,3 +39,16 @@
 4. Update Comments
 
 
+# Super Calc v2.0: 
+
+# First Commit: 
+
+1. Updated the layout to a more user friendly one. 
+2. Pretty much just small patches to styles
+
+# Script Update: 
+
+1. Added A button to calculate to support more than 2 combines
+2. Used a array instead of if else statements
+3. Code looks cleaner and is more maintainable
+
