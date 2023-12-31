@@ -109,16 +109,13 @@ function calculate() {
 
 // Add a single event listener to the parent element
 prev_calcs.addEventListener('click', function(event) {
- 
-  console.log('main.js flag status:',flag_2) // Log 
-  event_click++; 
-  console.log('event_click',event_click, 'added_divs',added_divs)
+  event_click++; // increase the counter of event listener runs (im super tired when writing this)
   if (event_click > added_divs) { 
     flag_2 = true;
-    event_click = 0
+    event_click = 0 // Somehow this works again im super tired idk
   }
   if (event.target.tagName === 'DIV' && flag_2 == true) { // If the item clicked on was one of the divs and the flag_2 == true
-    console.log('main js is doing its part')
+ 
       combine(event.target); // Call the combine function and pass the event.target as the caller
       flag_2 = false; // Set flag to prevent further combines until needed
   }

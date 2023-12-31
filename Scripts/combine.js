@@ -42,5 +42,5 @@ function calc_combines() {
     final_result + total[i]
     }
     console.log('The Grand total is,',final_result)
-    combine_flag = true
+    alert('Your total is:' + '' + final_result)
     }
