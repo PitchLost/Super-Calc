@@ -39,3 +39,14 @@
 4. Update Comments
 
 
+# Super Calc v2.0: 
+
+# First Commit: 
+
+1. Updated the layout to a more user friendly one. 
+2. Pretty much just small patches to styles
+
+# Script Update: 
+
+1. Coming soon...
+

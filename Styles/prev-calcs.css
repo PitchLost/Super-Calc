@@ -1,18 +1,19 @@
 body { 
     display: flex;
     justify-content: center;
+     
     
 }
 
 #prev-calcs { 
     /* Position */
     position: absolute;
-    top: 82%;
-    left: 5%;
+    top: 7%;
+    left: 30%;
     /* Size */
     /* width */
-    width: 90%;
-    max-width: 90%;
+    width: 68%;
+    max-width: 68%;
     /* height */
     min-height: 50%;
     height: max-content; 
@@ -20,12 +21,14 @@ body {
     /* Border */
     border-style: solid;
     border-width: thin;
-    border-color: white;
+    border-color: black;
     /* Flex */
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    /* Background Color:display:; */
+    background-color: white;
     
 
 }
