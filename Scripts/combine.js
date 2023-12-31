@@ -14,6 +14,11 @@ let flag_2 = true
 
 let combines_counter = 0
 
+let new_total
+let new_total_header
+
+
+
 
 // Add items to the combine array
 
@@ -39,11 +44,30 @@ return true
 
 
 function calc_combines() { 
-    divide.style.backgroundColor = 'Beige'
+    document.querySelectorAll('#prev-calcs div').forEach(divElement => {
+        divElement.style.backgroundColor = 'beige'; // Set the background color to the normal beige
+        divElement.style.color = 'black' // Set the text color back to black
+    });
+    
     
     for (let i = 0; i <total.length; i++) { 
-    final_result += parseFloat(total[i]);
+    final_result += parseFloat(total[i]); // Get the sum of the total array
     }
-    console.log('The Grand total is,',final_result)
-    alert('Your total is:' + '' + final_result)
+ let total_name = prompt('Your total is:' + '' + final_result + 'Enter a name to save this as:') // Give a alert with the total
+ console.log('Saving as',total_name)
+
+    // Add a new div with the grand total on it: 
+
+    new_total = document.createElement('div') // Create a div element with the total
+    new_total_header = document.createElement('header') // Create a div element with a normal header
+    new_total.textContent = final_result; // New element text content
+    new_total_header.textContent = total_name // New header text content
+    new_total.appendChild(new_total_header) // Merge the two elements
+    prev_calcs.appendChild(new_total) // Append the new elements to the prev_calcs
+
+    // Reset Variables: 
+    final_result = 0
+    total = [0]
+    total_name = null
+    console.log(final_result, total)
     }
