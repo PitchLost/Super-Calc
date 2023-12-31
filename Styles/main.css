@@ -79,6 +79,19 @@ body {
     
 }
 
+/* Calculate Button Main styles */
+
+#calculate { 
+    position: fixed;
+    left: 2%;
+    top: 86%;
+    width: 26%;
+    height: 4em;
+    border-radius: 15px;
+    border-width: thick;
+    font-size: 4mm;
+}
+
 
 
 
@@ -86,5 +99,10 @@ body {
 
 #calc-buttons button:hover { 
     background-color: gray;
+    color: white;
+}
+
+#calculate:hover { 
+    background-color: red;
     color: white;
 }

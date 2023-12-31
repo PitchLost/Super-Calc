@@ -48,5 +48,6 @@
 
 # Script Update: 
 
-1. Coming soon...
+1. Added A button to calculate to support more than 2 combines
+2. Used a array instead of if else statements
 

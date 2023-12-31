@@ -21,6 +21,10 @@ let flag = true;
 // Array to keep track of prev equations: 
 const prev_calcs_ar = []
 
+//! Testing: 
+let added_divs = 0
+let event_click = 0
+
 
 // Buttons: 
 const one = document.getElementById('one');
@@ -89,8 +93,11 @@ function calculate() {
 
 
   let answer = eval(textBox.value) // Get the answer of the equation 
-  console.log(answer) // Log Answer !TEMP!
+  
   // Append the answer to the previous answers: 
+  //! Testing
+  added_divs++;
+  //!
   const new_div = document.createElement('div') // Create a new div for the previous equation
   const new_header = document.createElement('header') // Create a new header element for the name of the equation
   new_header.textContent = nameBox.value // Assign the header element with nameBox.value
@@ -100,10 +107,22 @@ function calculate() {
 
   // Add Event listners to all the new divs:
 
-  document.querySelectorAll('#prev-calcs div').forEach(div => { 
-    div.addEventListener('click', function() {  // Add a event listner to each new div
-        combine(this) // Call the combine function and use this to track which element called the function
-    });
+// Add a single event listener to the parent element
+prev_calcs.addEventListener('click', function(event) {
+ 
+  console.log('main.js flag status:',flag_2) // Log 
+  event_click++; 
+  console.log('event_click',event_click, 'added_divs',added_divs)
+  if (event_click > added_divs) { 
+    flag_2 = true;
+    event_click = 0
+  }
+  if (event.target.tagName === 'DIV' && flag_2 == true) { // If the item clicked on was one of the divs and the flag_2 == true
+    console.log('main js is doing its part')
+      combine(event.target); // Call the combine function and pass the event.target as the caller
+      flag_2 = false; // Set flag to prevent further combines until needed
+  }
+ 
 });
  // Clear the boxes
  clear_all() 
