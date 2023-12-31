@@ -21,6 +21,8 @@ let combines_counter = 0
 
 
 function combine(caller) { 
+    caller.style.backgroundColor = 'red' // Set the background color to red when selected
+    caller.style.color = 'white' // Set the text color to white when selected
     console.log('The length of the total is,',total.length) // Log
     console.log('combine function (11)') // Log
 to_add = caller.childNodes[0].textContent.trim() // Assign the variable with the value being added
@@ -37,9 +39,10 @@ return true
 
 
 function calc_combines() { 
+    divide.style.backgroundColor = 'Beige'
     
     for (let i = 0; i <total.length; i++) { 
-    final_result + total[i]
+    final_result += parseFloat(total[i]);
     }
     console.log('The Grand total is,',final_result)
     alert('Your total is:' + '' + final_result)
