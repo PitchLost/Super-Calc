@@ -1,0 +1,23 @@
+{
+    "name": "qw-side-server",
+    "version": "1.0.0",
+    "description": "Server for transporting data to the database",
+    "main": "server.mjs",
+    "scripts": {
+      "start": "node server.mjs"
+    },
+    "dependencies": {
+      "express": "^4.17.1" 
+    },
+    "devDependencies": {
+
+    },
+    "keywords": [
+      "node",
+      "server",
+      "express"
+    ],
+    "author": "Johno",
+    "license": "MIT" 
+  }
+  
